@@ -78,6 +78,16 @@ class _BgChangerState extends State<BgChanger> {
         color: colorrightnow,
       ),
       child: TextButton(
+        style: ButtonStyle(
+          backgroundColor: MaterialStateProperty.all<Color>(colorrightnow),
+          foregroundColor: MaterialStateProperty.all<Color>(Colors.white),
+          overlayColor: MaterialStateProperty.all<Color>(Colors.white),
+          shadowColor: MaterialStateProperty.all<Color>(Colors.white),
+          elevation: MaterialStateProperty.all<double>(10.0),
+          padding: MaterialStateProperty.all<EdgeInsets>(
+            const EdgeInsets.all(10.0),
+          ),
+        ),
         onPressed: changecolor,
         child:
             const Text('change color', style: TextStyle(color: Colors.white)),
